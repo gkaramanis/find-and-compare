@@ -20,7 +20,10 @@ get_table <- function(link) {
 
 tables <- sapply(links, get_table)
 n1 <- max(sapply(tables, nrow))
-schoolStats <- data.frame(lapply(schoolStats,  function(x) x[seq_len(n1),]))
+st <- data.frame(lapply(tables,  function(x) x[seq_len(n1),]))
+
+# Drop unneeded columns
+schoolStats <- st[,-c(seq(3,ncol(st), 2))]
 
 # Save as file in working directory
 saveRDS(schoolStats, "schoolStats.rda")
