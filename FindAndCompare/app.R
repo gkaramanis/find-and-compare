@@ -1,6 +1,6 @@
 library(shiny)
 
-df <- readRDS("/Users/Georgios/Desktop/FindAndCompare/schoolStats.rda")
+df <- readRDS("/Users/Georgios/Documents/Projects/FindAndCompare/schoolStats.rda")
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
