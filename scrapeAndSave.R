@@ -35,4 +35,4 @@ scSt[scSt=="-"]<-NA
 names(scSt) <- scSt[2,]
 
 # Save as file in working directory
-saveRDS(schoolStats, "schoolStats.rda")
+# saveRDS(schoolStats, "schoolStats.rds")
