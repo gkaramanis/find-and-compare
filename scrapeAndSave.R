@@ -23,7 +23,7 @@ tables <- sapply(links, get_table)
 # z <- Filter(function(x) length(x[[1]])==17, tables)
 
 n1 <- max(sapply(tables, nrow))
-st <- data.frame(lapply(tables,  function(x) x[seq_len(n1),]))
+st <- data.frame(lapply(tables, function(x) x[seq_len(n1),]))
 
 # Drop unneeded columns
 schoolStats <- st[,-c(seq(3,ncol(st), 2))]
@@ -35,4 +35,4 @@ scSt[scSt=="-"]<-NA
 names(scSt) <- scSt[2,]
 
 # Save as file in working directory
-# saveRDS(schoolStats, "schoolStats.rds")
+saveRDS(schoolStats, "scSt.rds")
